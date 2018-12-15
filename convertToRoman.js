@@ -1,6 +1,7 @@
 function convertToRoman(event) {
   let output = document.getElementById('output');
   let regex = /^[0-9]+$/; //numbers only
+  let onlyNull = /^[0\s]+$/;
   let romanSingle = "";
   let romanTenth = "";
   let romanHundredth = "";
@@ -48,7 +49,11 @@ function convertToRoman(event) {
 	  			    4 : 'MMMM'
 	  			};
 
-  if (isNaN(event.target.value)) {
+  if ((event.target.value.length > 1) && (onlyNull.test(event.target.value))) {
+  	output.innerHTML = "Enter a valid number";
+  }
+
+  else if (isNaN(event.target.value)) {
 		output.innerHTML = "Enter only numbers.";
   }
 
