@@ -6,6 +6,9 @@ function convertToRoman(event) {
   let romanTenth = "";
   let romanHundredth = "";
   let romanThousandth = "";
+  //the reason I have chosen to store the numbers in objects instead of in the "switch cases" is to show 
+  //if it would be needed to be "translated" to e.g. Eastern Nagari numeral, it would be enough to store those
+  //in objects instead of rewriting the function
   let single = { 	0 : 'Zero. The number zero does not have its own Roman numeral, but the word nulla (the Latin word meaning "none") was used by medieval scholars in lieu of 0.',
 		  			1 : 'I',
 		  			2 : 'II',
