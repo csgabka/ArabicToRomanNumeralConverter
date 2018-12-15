@@ -48,11 +48,7 @@ function convertToRoman(event) {
 	  			    4 : 'MMMM'
 	  			};
 
-  if ((event.target.value.length > 1 && event.target.value.match("0"))) {
-		output.innerHTML = "Enter a valid number";
-  }
-
-  else if (isNaN(event.target.value)) {
+  if (isNaN(event.target.value)) {
 		output.innerHTML = "Enter only numbers.";
   }
 
