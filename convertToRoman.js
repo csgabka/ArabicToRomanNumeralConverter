@@ -1,7 +1,7 @@
 function convertToRoman(event) {
   let output = document.getElementById('output');
   let regex = /^[0-9]+$/; //numbers only
-  let onlyNull = /^[0\s]+$/;
+  let onlyNull = /^[0\s]+$/; //no zeros
   let romanSingle = "";
   let romanTenth = "";
   let romanHundredth = "";
